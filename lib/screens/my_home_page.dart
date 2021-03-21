@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/screens/home/homepage.dart';
 import 'profile/profile_page.dart';
 import 'order/order_details.dart';
+import 'notification/notification_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -10,11 +12,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 1;
   static List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-    ),
+    Homepage(),
     Order(),
-    Text("Notifications"),
+    NotificationPage(),
     ProfilePage(),
   ];
   List _titles = ["Home", "Order Details", "Notifications", "Profile"];
